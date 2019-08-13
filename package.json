@@ -6,16 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Lauz/Messenger-Chatbot.git"
+  },
   "author": "G-Lauz",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "mongodb": "^3.3.0-beta2",
-    "xmldoc": "^1.1.2",
-    "xmldom": "^0.1.27",
-    "xmlhttprequest": "^1.8.0",
-    "xpath": "0.0.27"
-  }
+    "xmldom": "^0.1.27"
+  },
+  "bugs": {
+    "url": "https://github.com/G-Lauz/Messenger-Chatbot/issues"
+  },
+  "homepage": "https://github.com/G-Lauz/Messenger-Chatbot#readme"
 }
