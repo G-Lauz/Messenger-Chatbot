@@ -232,13 +232,7 @@ methods.handlePostback = function(event, sender) {
         response = reply.explore(sender_locale);
         sendAPI.call(sender_psid, response, () => {
           response = reply.q_explore(sender_locale);
-          sendAPI.call(sender_psid, response, () => {
-            response = reply.explore_choice(sender_locale);
-            sendAPI.call(sender_psid, response, () => {
-              response = reply.q_explore_choice(sender_locale);
-              sendAPI.call(sender_psid, response, () => {});
-            });
-          });
+          sendAPI.call(sender_psid, response, () => {});
         });
         break;
 
