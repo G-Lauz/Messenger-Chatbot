@@ -6,12 +6,17 @@
 require('dotenv').config();
 const setupGetStartedButton = require('./utils/get-started-button');
 var chatbot = require('./chatbot');
+var compression = require('compression'); // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
+var helmet = require('helmet'); // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
 
 // Imports dependencies and set up http server
 const
   express = require('express'),
   bodyParser = require('body-parser'),
   app = express().use(bodyParser.json()); // creates express http server
+
+app.use(compression()); // Compress all routes https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
+app.use(helmet()); // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
 
 // Sets server port and logs message on success
 if(!module.parent){
