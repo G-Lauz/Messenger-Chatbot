@@ -45,7 +45,7 @@ function getThreadOwner(sender_psid) {
   });
 
   req.on('error', error => {
-    console.log(error);
+    console.error(error);
   });
 
   req.end();

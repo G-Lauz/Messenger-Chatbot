@@ -44,7 +44,7 @@ app.post('/webhook', (req, res) => {
       // iterate webhook events
       webhook_events.messaging.forEach(event =>{
 
-        console.log(event);
+        //console.log(event);
 
         if(event.message) {
           chatbot.receivedMessage(event);

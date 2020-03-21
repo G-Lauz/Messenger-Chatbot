@@ -27,7 +27,7 @@ function call(path, payload, done) {
     "json": payload
   }, (err, res, body) => {
     if(!err && res.statusCode === 200) {
-        console.log('Message sent');
+        //console.log('Message sent');
     } else {
       console.error('Error: ' + err);
       console.log(body);
@@ -105,7 +105,7 @@ function callGetLocaleAPI(event, handleReceived){
     })
   });
   req.on('error', function(err){
-    console.log('ERROR' + e.message);
+    console.error('ERROR' + e.message);
   });
 }
 
